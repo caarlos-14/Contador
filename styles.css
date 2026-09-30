@@ -230,9 +230,82 @@ background:var(--other-color-rgba);
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width:320px) and (max-width: 480px) {
     body{
-    height:115vh;
+    height:140vh;
+    }
+    .header{
+        padding:1em;
+        margin-bottom:3em;
+    }
+    .counter-title{
+        font-size:1.5em !important;
+    }
+    #porcentaje{
+       font-size:0.6em !important; 
+    }
+    #aviso{
+        top:6em;
+    }
+    .counter-container-main{
+        padding:1.5em;
+    }
+    .other-counter {
+        flex-direction: column;  
+        height: auto;
+        gap:2em;
+    }
+    .other-counter .counter-container {
+        max-width:95%;
+        padding:3em 2em
+    }
+}
+
+@media (min-width:481px) and (max-width: 768px) {
+    .header{
+        margin-bottom:6em;
+        padding:2em;
+        justify-content:center;
+    }
+    .counter-title{
+        font-size:1.8em !important;
+    }
+    .counter-container-main{
+        padding:1em;
+    }
+    .other-counter {
+        flex-direction: column;  
+        height: auto;
+        gap:2em;
+    }
+    .other-counter .counter-container {
+        max-width:95%;
+        padding:3em 2em
+    }
+    #porcentaje{
+       font-size:0.8em !important; 
+    }
+    .header .estado{
+        font-size:0.7em;
+    }
+    #aviso{
+        top:5em;
+    }
+}
+
+@media (min-width:769px) and (max-width: 1024px) {
+    .counter-title{
+        font-size:1.8em !important;
+    }
+    #porcentaje{
+       font-size:0.8em !important; 
+    }
+    .counter-container-main{
+        padding:0.8em;
+    }
+    #aviso{
+        top:6em;
+        width:90% !important;
     }
     .other-counter {
         flex-direction: column;  
@@ -256,58 +329,6 @@ background:var(--other-color-rgba);
     }
     .header .estado{
         font-size:0.8em;
-    }
-
-    #aviso{
-        margin-top:3.5em !important;
-        width:95% !important;
-    }
-    
-}
-
-@media (min-width:320px) and (max-width: 480px) {
-    .header{
-        padding:1em;
-        margin-bottom:9.4em;
-    }
-    .counter-title{
-        font-size:1.5em !important;
-    }
-    #porcentaje{
-       font-size:0.6em !important; 
-    }
-}
-
-@media (min-width:481px) and (max-width: 768px) {
-    .header{
-        margin-bottom:8em;
-    }
-    .counter-title{
-        font-size:1.8em !important;
-    }
-    #porcentaje{
-       font-size:0.8em !important; 
-    }
-    .header .estado{
-        font-size:0.7em;
-    }
-}
-
-@media (min-width:769px) and (max-width: 1024px) {
-    .header{
-        margin-bottom:0.8em;
-    }
-    .counter-title{
-        font-size:1.8em !important;
-    }
-    #porcentaje{
-       font-size:0.8em !important; 
-    }
-    .header .estado{
-        font-size:1em;
-    }
-    .counter-container-main{
-        padding:0.8em;
     }
 }
 
