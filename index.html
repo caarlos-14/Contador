@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Aforo General</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/descarga.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"></link>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+        <i class="fa-solid fa-user-plus color"></i>
+        <h3 class="color">AforoTotal</h3>
+        </div>
+
+        <div class="menu">
+        <div class="estado">
+            <span class="estado-badge online"></span>
+            <i class="fa-solid fa-user color"></i>
+            <span class="color">Sistema de contabilidad de aforo</span>
+        </div>
+        <div class="icono" id="icon-cambio">
+            <i id="icon" class="fa-regular fa-moon"></i> 
+        </div>
+        </div>      
+    </header>
+    <main class="main">
+        <div class="counter-container-main">
+            <h1 class="counter-title">Contador de Aforo</h1>
+            <div class="counter-display" id="contador">0</div>
+            <div id="porcentaje">0% del aforo permitido</div>
+        </div>
+        <div class="advertencias color shadow">
+            <h2>Advertencia</h2>
+            <p>Recuerda que el aforo máximo permitido es de 100 personas. Mantén un registro adecuado para garantizar la seguridad de todos.</p>
+        </div>
+    <div class="other-counter">
+        <div class="counter-container card shadow">
+            <h1 class="counter-title">Contador de Hombres<i class="fa-solid fa-mars"></i></h1>
+            <div class="counter-display" id="hombresContador">0</div>
+            <div class="counter-buttons">
+                <button class="counter-button button" id="decrementHombresButton">-1</button>
+                <button class="counter-button button" id="resetHombresButton">Reiniciar</button>
+                <button class="counter-button button" id="incrementHombresButton">+1</button>
+            </div>
+        </div>
+        <div class="counter-container card shadow">
+            <h1 class="counter-title">Contador de Mujeres<i class="fa-solid fa-venus"></i></h1>
+            <div class="counter-display" id="mujeresContador">0</div>
+            <div class="counter-buttons">
+                <button class="counter-button button" id="decrementMujeresButton">-1</button>
+                <button class="counter-button button" id="resetMujeresButton">Reiniciar</button>
+                <button class="counter-button button" id="incrementMujeresButton">+1</button>
+            </div>
+        </div>
+    </div>
+    </main>
+    <div id="aviso"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+:root{
+    --primary-color: #010736;
+    --secondary-color: #0D1C42;
+    --other-color: #22396F;
+    --other-color-rgba: rgb(34, 57, 111,0.8);
+    --text-color: #FCF1D0;
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    flex-wrap: wrap;
+    padding:1em;
+}
+.header .logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin:1em;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.menu{
+display:flex;
+align-items:center;
+gap:1em;
+margin-right:1em;
+}
+
+.icono{
+background-color:var(--other-color);
+padding:0.8em;
+border-radius:50%;
+cursor:pointer;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.claro{
+    background-color:var(--text-color);
+}
+.claro .color{
+    color:var(--other-color);
+}
+
+.claro .shadow{
+    box-shadow: 0 6px 0px var(--secondary-color);
+}
+.claro .card{
+    background-color:var(--other-color);  
+}
+.claro .card .button{
+    background-color:var(--secondary-color);
+}
+.claro .advertencia{
+    background-color:var(--other-color);
+}
+
+
+.counter-container-main{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    border-bottom: 3px solid var(--text-color);
+    width: 100vw;
+    height:50%;
+    background-image:url("./uwagapstryk-city-1016980_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.counter-container-main::after{
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 27, 27, 0.5);
+}
+.counter-container{
+    background-color: var(--secondary-color);
+    padding: 5em 4em;
+    max-width: 35%;
+    width: 100%;
+    border-radius: 1em;
+    box-shadow: 0 4px 0px var(--text-color);
+}
+.counter-container .counter-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2em;
+    margin: 0.5em;
+}
+.counter-container .counter-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.counter-container .counter-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 0.5em;
+}
+.other-counter{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+.counter-container .counter-buttons button{
+    background-color: var(--other-color);
+    border: none;
+    color: var(--text-color);
+    padding: 0.8em 1.2em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.counter-container-main .counter-buttons button{
+    background-color: var(--other-color);
+    border: none;
+    color: var(--text-color);
+    padding: 0.8em 1.2em;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.counter-container-main .counter-title{
+font-size: 3em;
+}
+.counter-container-main .counter-display{
+font-size: 3em;
+}
+.counter-container-main .counter-title,.counter-container-main .counter-display{
+    position: relative;
+    z-index: 1;
+}
+
+.estado{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--text-color);
+    margin-right: 1em;
+    background-color: rgba(51, 253, 71, 0.1);
+    padding: 0.8em 1.2em;
+    border-radius: 0.5em;
+}
+
+.estado-badge{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.estado-badge.online{
+    background-color: green;
+    animation: pulse 1.4s infinite;
+}
+
+.advertencias{
+    padding: 1.2em;
+    max-width: 95%;
+    width: 100%;
+    border-radius: 1em;
+    box-shadow: 0 4px 0px var(--text-color);
+    margin: 1em;
+}
+
+#porcentaje{
+position:absolute;
+bottom:0.5em;
+padding:0.7em;
+right:0.5em;
+font-size:1em;
+border-radius:20px;
+color:var(--text-color);
+z-index:1;
+background:var(--other-color-rgba);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.90);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0.90);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+    height:115vh;
+    }
+    .other-counter {
+        flex-direction: column;  
+        height: auto;
+        gap:2em;
+    }
+    .counter-container-main{
+        height:50vh !important;
+    }
+
+    .other-counter .counter-container {
+        max-width:95%;
+        padding:3em 2em
+    }
+    .header{
+        margin-bottom:3em;
+    }
+    .header .logo{
+        font-size:1em;
+    }
+    .header .estado{
+        font-size:0.8em;
+    }
+
+    #aviso{
+        margin-top:3.5em !important;
+        width:95% !important;
+    }
+    
+}
