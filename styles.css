@@ -265,16 +265,49 @@ background:var(--other-color-rgba);
     
 }
 
-@media (max-width: 545px) {
+@media (min-width:320px) and (max-width: 480px) {
     .header{
-        margin-bottom:10.4em;
+        padding:1em;
+        margin-bottom:9.4em;
     }
-    .header .logo{
-        font-size:0.8em;
+    .counter-title{
+        font-size:1.5em !important;
+    }
+    #porcentaje{
+       font-size:0.6em !important; 
+    }
+}
+
+@media (min-width:481px) and (max-width: 768px) {
+    .header{
+        margin-bottom:8em;
+    }
+    .counter-title{
+        font-size:1.8em !important;
+    }
+    #porcentaje{
+       font-size:0.8em !important; 
     }
     .header .estado{
         font-size:0.7em;
     }
-
-    
 }
+
+@media (min-width:769px) and (max-width: 1024px) {
+    .header{
+        margin-bottom:0.8em;
+    }
+    .counter-title{
+        font-size:1.8em !important;
+    }
+    #porcentaje{
+       font-size:0.8em !important; 
+    }
+    .header .estado{
+        font-size:1em;
+    }
+    .counter-container-main{
+        padding:0.8em;
+    }
+}
+
