@@ -241,6 +241,7 @@ background:var(--other-color-rgba);
     }
     .counter-container-main{
         height:50vh !important;
+        padding:2em;
     }
 
     .other-counter .counter-container {
@@ -248,7 +249,7 @@ background:var(--other-color-rgba);
         padding:3em 2em
     }
     .header{
-        margin-bottom:3em;
+        margin-bottom:7.5em;
     }
     .header .logo{
         font-size:1em;
@@ -261,5 +262,19 @@ background:var(--other-color-rgba);
         margin-top:3.5em !important;
         width:95% !important;
     }
+    
+}
+
+@media (max-width: 545px) {
+    .header{
+        margin-bottom:10.4em;
+    }
+    .header .logo{
+        font-size:0.8em;
+    }
+    .header .estado{
+        font-size:0.7em;
+    }
+
     
 }
